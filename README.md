@@ -8,12 +8,19 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - [MyStore](#mystore)
   - [Table Of Contents](#table-of-contents)
+  - [Features](#features)
   - [Development server](#development-server)
   - [Code scaffolding](#code-scaffolding)
   - [Build](#build)
   - [Running unit tests](#running-unit-tests)
   - [Running end-to-end tests](#running-end-to-end-tests)
   - [Further help](#further-help)
+
+## Features
+
+- Shows a list of products (either from provided .json)
+- Shows a product details view when clicked on product
+- Add products to cart, remove them there and checkout the order
 
 ## Development server
 
