@@ -24,7 +24,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+I am using `json-server` to simulate a server from json file which contain the data so to run the project please use `yarn start` to run the server/client at the same time and please don't use `ng serve` as now you will run frontend without backend json file
 
 ## Code scaffolding
 
