@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "server": "json-server ./server/api/db.json --watch",
+    "server": "json-server ./server/api/db.json --watch --no-cors",
     "start": "concurrently 'yarn server' 'ng serve --watch --o'",
     "build": "ng build",
     "test": "ng test",
