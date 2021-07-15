@@ -1,1 +1,9 @@
-<p>product-item works!</p>
+<div class="product-container">
+  <a [routerLink]="['/products', product.id]" routerLinkActive="router-link-active">
+    <img [src]="product.url" [alt]="product.name" class="product-image" />
+  </a>
+  <h2>{{ product.name }}</h2>
+  <p>{{ product.price | currency: 'EUR' }}</p>
+  <app-add-cart-select *ngIf="currentPath == '/products'" [product]="product"></app-add-cart-select>
+  <p *ngIf="currentPath == '/cart'">Amount: {{ product.selectedAmount }}</p>
+</div>

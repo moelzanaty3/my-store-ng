@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { CartComponent } from './components/cart/cart.component'
-import { ConfirmationComponent } from './components/confirmation/confirmation.component'
-import { ProductDetailsComponent } from './components/product-details/product-details.component'
-import { ProductListComponent } from './components/product-list/product-list.component'
+import { CartComponent } from './pages/cart/cart.component'
+import { ConfirmationComponent } from './pages/confirmation/confirmation.component'
+import { NotFoundComponent } from './components/not-found/not-found.component'
+import { ProductDetailsComponent } from './pages/product-details/product-details.component'
+import { ProductListComponent } from './pages/product-list/product-list.component'
 
 const routes: Routes = [
-  { path: '', component: ProductListComponent },
+  { path: '', redirectTo: 'products', pathMatch: 'full' },
+  { path: 'products', component: ProductListComponent },
+  { path: 'products/:id', component: ProductDetailsComponent},
   { path: 'cart', component: CartComponent },
-  { path: 'product/:id', component: ProductDetailsComponent},
   { path: 'confirm', component: ConfirmationComponent},
-  { path: '', redirectTo: 'home', pathMatch: 'full' }
+  {path: '404', component: NotFoundComponent},
+  {path: '**', redirectTo: '/404'},
 ]
 
 @NgModule({

@@ -1,0 +1,11 @@
+<form class="form-margin" [formGroup]="myForm" (ngSubmit)="addToCart(product)">
+  <select class="form-control" name="selectedAmount" formControlName="selectedAmount">
+    <option value="0" disabled selected>
+      <p>Amount</p>
+    </option>
+    <option *ngFor="let number of [1, 2, 3, 4, 5, 6]" [value]="number">{{ number }}</option>
+  </select>
+  <button type="submit" class="btn btn-primary mt-3" [disabled]="getSelectedAmount() < 1">
+    Add to Cart
+  </button>
+</form>

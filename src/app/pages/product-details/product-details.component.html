@@ -1,0 +1,13 @@
+<div class="detail-container">
+  <img [src]="product.url" [alt]="product.name" class="img">
+  <div class="detail-item">
+    <div class="product-data">
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+      <p>{{ product.price | currency :'EUR'}}</p>
+      <p *ngIf="product.category">{{ product.category }}</p>
+    </div>
+    <app-add-cart-select  [product]="product"></app-add-cart-select>
+    <a routerLink="/products" routerLinkActive="router-link-active" class="back-link">← Back to Products</a>
+  </div>
+</div>

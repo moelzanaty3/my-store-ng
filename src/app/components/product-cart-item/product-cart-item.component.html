@@ -1,0 +1,14 @@
+<div class="cart-item">
+  <a [routerLink]="['/products', product.id]" routerLinkActive="router-link-active">
+    <img [src]="product.url" [alt]="product.name" class="img" />
+  </a>
+  <div class="cart-item-details">
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.price | currency: 'EUR' }}</p>
+    <p [formGroup]="myForm">Amount:
+      <input class="number-input form-control" type="number" min="1" formControlName="selectedAmount">
+    </p>
+    <button class="btn btn-danger" (click)="removeProductFromCart(product)">Remove</button>
+  </div>
+
+</div>
